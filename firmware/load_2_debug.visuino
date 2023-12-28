@@ -1,0 +1,613 @@
+{
+  "Config": {
+    "Build": {
+      "Board": "arduino:avr:micro"
+    }
+  },
+  "Version": "2",
+  "Product": "Visuino Pro - Visual Arduino Programming",
+  "Content": "OpenWire Diagram",
+  "Units": [
+    {
+      "Name": "__OpenWireRootUnit__",
+      "*": [
+        {
+          "X": 256,
+          "Name": "Arduino",
+          "Instance": {
+            "Serial": {
+              "*": [
+                {
+                  "Speed": 115200,
+                  "OutputPin": {
+                    "SinkPins": [
+                      {
+                        "ID": "__OpenWireRootUnit__.CharToText1.InputPin"
+                      }
+                    ]
+                  },
+                  "+": "TArduinoHardwareSerial"
+                },
+                {
+                  "+": "TArduinoDirectHardwareSerial"
+                }
+              ]
+            },
+            "+": "TArduinoBoard",
+            "Modules": {
+              "*": [
+                {
+                  "+": "TArduinoEEPROMModule"
+                },
+                {
+                  "+": "TArduinoKeyboardModule"
+                },
+                {
+                  "+": "TArduinoMouseModule"
+                }
+              ]
+            },
+            "I2CChannels": {
+              "*": [
+                {
+                  "InputPin": {
+                    "SourcePins": [
+                      {
+                        "ID": "__OpenWireRootUnit__.DisplayOLED1.OutputPin"
+                      }
+                    ]
+                  },
+                  "+": "TArduinoI2C"
+                }
+              ]
+            },
+            "Digital": {
+              "*": [
+                {
+                  "+": "TArduinoAdditionalDigitalSerial1InterruptChannel"
+                },
+                {
+                  "+": "TArduinoAdditionalDigitalSerial1InterruptChannel"
+                },
+                {
+                  "+": "TArduinoAdditionalDigitalI2C0InterruptChannel"
+                },
+                {
+                  "+": "TArduinoBasicDigitalPWMI2C0InterruptChannel"
+                },
+                {
+                  "+": "TArduinoCombinedAnalogDigitalChannel"
+                },
+                {
+                  "OutputPin": {
+                    "SinkPins": [
+                      {
+                        "Name": "__OpenWireRootUnit__.WeightScale1.Powered",
+                        "ID": "__OpenWireRootUnit__.WeightScale1.PoweredInputPin"
+                      },
+                      {
+                        "ID": "__OpenWireRootUnit__.DetectEdge1.InputPin"
+                      },
+                      {
+                        "Name": "__OpenWireRootUnit__.CompareRange1.Enabled",
+                        "ID": "__OpenWireRootUnit__.CompareRange1.EnabledInputPin"
+                      }
+                    ]
+                  },
+                  "+": "TArduinoBasicDigitalPWMChannel"
+                },
+                {
+                  "+": "TArduinoCombinedAnalogDigitalPWMChannel"
+                },
+                {
+                  "DigitalInputPin": {
+                    "SourcePin": {
+                      "Name": "__OpenWireRootUnit__.DigitalMultiSource1.OutputPins.Pin [0]",
+                      "ID": "__OpenWireRootUnit__.DigitalMultiSource1.OutputPins._Pin0"
+                    }
+                  },
+                  "+": "TArduinoAdditionalDigitalInterruptChannel"
+                },
+                {
+                  "DigitalInputPin": {
+                    "SourcePin": {
+                      "ID": "__OpenWireRootUnit__.WeightScale1.SensorClockOutputPin"
+                    }
+                  },
+                  "+": "TArduinoCombinedAnalogDigitalChannel"
+                },
+                {
+                  "OutputPin": {
+                    "SinkPins": [
+                      {
+                        "ID": "__OpenWireRootUnit__.WeightScale1.SensorDataInputPin"
+                      }
+                    ]
+                  },
+                  "+": "TArduinoCombinedAnalogDigitalPWMChannel"
+                },
+                {
+                  "DigitalInputPin": {
+                    "SourcePin": {
+                      "Name": "__OpenWireRootUnit__.DigitalMultiSource1.OutputPins.Pin [1]",
+                      "ID": "__OpenWireRootUnit__.DigitalMultiSource1.OutputPins._Pin1"
+                    }
+                  },
+                  "+": "TArduinoCombinedAnalogDigitalPWMChannel"
+                },
+                {
+                  "+": "TArduinoAdditionalDigitalSPI0Channel"
+                },
+                {
+                  "+": "TArduinoAdditionalDigitalSPI0Channel"
+                },
+                {
+                  "+": "TArduinoAdditionalDigitalSPI0Channel"
+                },
+                {
+                  "+": "TArduinoBasicDigitalInputChannel"
+                },
+                {
+                  "+": "TArduinoCombinedAnalogDigitalChannel"
+                },
+                {
+                  "+": "TArduinoCombinedAnalogDigitalChannel"
+                },
+                {
+                  "+": "TArduinoCombinedAnalogDigitalChannel"
+                },
+                {
+                  "+": "TArduinoCombinedAnalogDigitalChannel"
+                },
+                {
+                  "+": "TArduinoBasicDigitalInputChannel"
+                }
+              ]
+            },
+            "SPIChannels": {
+              "*": [
+                {
+                  "+": "TArduinoSPI"
+                }
+              ]
+            },
+            "BoardType": "Arduino Pro Micro"
+          },
+          "Type": "Component",
+          "Y": 480
+        },
+        {
+          "X": 608,
+          "Name": "WeightScale1",
+          "Instance": {
+            "SensorClockOutputPin": {
+              "SinkPins": [
+                {
+                  "Name": "__OpenWireRootUnit__.Arduino.Digital[8].DigitalInputPin",
+                  "ID": "__OpenWireRootUnit__.Arduino.Digital._Item8.DigitalInputPin"
+                }
+              ]
+            },
+            "OutputPin": {
+              "SinkPins": [
+                {
+                  "ID": "__OpenWireRootUnit__.CompareRange1.InputPin"
+                },
+                {
+                  "ID": "__OpenWireRootUnit__.DisplayOLED1.InputPin"
+                }
+              ]
+            },
+            "+": "TArduinoHX711Weight",
+            "SensorDataInputPin": {
+              "SourcePin": {
+                "Name": "__OpenWireRootUnit__.Arduino.Digital[9].OutputPin",
+                "ID": "__OpenWireRootUnit__.Arduino.Digital._Item9.OutputPin"
+              }
+            },
+            "@": [
+              {
+                "PinName": "Powered",
+                "@": "Powered",
+                "+": "TOWBooleanSinkPinBinding",
+                "SourcePin": {
+                  "Name": "__OpenWireRootUnit__.Arduino.Digital[5].OutputPin",
+                  "ID": "__OpenWireRootUnit__.Arduino.Digital._Item5.OutputPin"
+                },
+                "Component": "WeightScale1"
+              }
+            ],
+            "Powered": false,
+            "ZeroInputPin": {
+              "SourcePins": [
+                {
+                  "ID": "__OpenWireRootUnit__.Timeout3.OutputPin"
+                },
+                {
+                  "ID": "__OpenWireRootUnit__.DetectEdge4.OutputPin"
+                }
+              ]
+            },
+            "CalibrateInputPin": {
+              "SourcePins": [
+                {
+                  "ID": "__OpenWireRootUnit__.DetectEdge3.OutputPin"
+                }
+              ]
+            }
+          },
+          "Type": "Component",
+          "Y": 624
+        },
+        {
+          "X": 656,
+          "Name": "DetectEdge1",
+          "Instance": {
+            "OutputPin": {
+              "SinkPins": [
+                {
+                  "ID": "__OpenWireRootUnit__.Timeout3.StartInputPin"
+                }
+              ]
+            },
+            "InputPin": {
+              "SourcePin": {
+                "Name": "__OpenWireRootUnit__.Arduino.Digital[5].OutputPin",
+                "ID": "__OpenWireRootUnit__.Arduino.Digital._Item5.OutputPin"
+              }
+            },
+            "+": "TArduinoDetectEdge"
+          },
+          "Type": "Component",
+          "Y": 880
+        },
+        {
+          "X": 848,
+          "Name": "DetectEdge2",
+          "Instance": {
+            "Rising": false,
+            "OutputPin": {
+              "SinkPins": [
+                {
+                  "ID": "__OpenWireRootUnit__.Timer.ResetInputPin"
+                }
+              ]
+            },
+            "+": "TArduinoDetectEdge",
+            "InputPin": {
+              "SourcePin": {
+                "Name": "__OpenWireRootUnit__.DigitalMultiSource1.OutputPins.Pin [2]",
+                "ID": "__OpenWireRootUnit__.DigitalMultiSource1.OutputPins._Pin2"
+              }
+            }
+          },
+          "Type": "Component",
+          "Y": 1344
+        },
+        {
+          "X": 640,
+          "Name": "DigitalMultiSource1",
+          "Instance": {
+            "OutputPins": {
+              "Count": 3,
+              "Form": "__OpenWireRootUnit__",
+              "Pins": [
+                {
+                  "Type": "ptSource",
+                  "SinkPins": [
+                    {
+                      "Name": "__OpenWireRootUnit__.Arduino.Digital[7].DigitalInputPin",
+                      "ID": "__OpenWireRootUnit__.Arduino.Digital._Item7.DigitalInputPin"
+                    }
+                  ]
+                },
+                {
+                  "Type": "ptSource",
+                  "SinkPins": [
+                    {
+                      "Name": "__OpenWireRootUnit__.Arduino.Digital[10].DigitalInputPin",
+                      "ID": "__OpenWireRootUnit__.Arduino.Digital._Item10.DigitalInputPin"
+                    }
+                  ]
+                },
+                {
+                  "Type": "ptSource",
+                  "SinkPins": [
+                    {
+                      "ID": "__OpenWireRootUnit__.DetectEdge2.InputPin"
+                    }
+                  ]
+                }
+              ]
+            },
+            "InputPin": {
+              "SourcePin": {
+                "ID": "__OpenWireRootUnit__.Timer.OutputPin"
+              }
+            },
+            "+": "TArduinoDigitalMultiSource"
+          },
+          "Type": "Component",
+          "Y": 1264
+        },
+        {
+          "X": 720,
+          "Name": "CompareRange1",
+          "Instance": {
+            "OutputPin": {
+              "SinkPins": [
+                {
+                  "ID": "__OpenWireRootUnit__.DetectEdge.InputPin"
+                }
+              ]
+            },
+            "InputPin": {
+              "SourcePin": {
+                "ID": "__OpenWireRootUnit__.WeightScale1.OutputPin"
+              }
+            },
+            "+": "TArduinoAnalogCompareRange",
+            "Range": {
+              "Max": 50000,
+              "Min": 10000
+            },
+            "OnlyChanged": false,
+            "@": [
+              {
+                "PinName": "Enabled",
+                "@": "Enabled",
+                "+": "TOWBooleanSinkPinBinding",
+                "SourcePin": {
+                  "Name": "__OpenWireRootUnit__.Arduino.Digital[5].OutputPin",
+                  "ID": "__OpenWireRootUnit__.Arduino.Digital._Item5.OutputPin"
+                },
+                "Component": "CompareRange1"
+              }
+            ],
+            "Enabled": false
+          },
+          "Type": "Component",
+          "Y": 1040
+        },
+        {
+          "X": 896,
+          "Name": "Start1",
+          "Instance": {
+            "OutputPin": {
+              "SinkPins": [
+                {
+                  "ID": "__OpenWireRootUnit__.Timeout3.StartInputPin"
+                }
+              ]
+            },
+            "+": "TArduinoStart"
+          },
+          "Type": "Component",
+          "Y": 944
+        },
+        {
+          "X": 1072,
+          "Name": "Timeout3",
+          "Instance": {
+            "OutputPin": {
+              "SinkPins": [
+                {
+                  "ID": "__OpenWireRootUnit__.WeightScale1.ZeroInputPin"
+                }
+              ]
+            },
+            "StartInputPin": {
+              "SourcePins": [
+                {
+                  "ID": "__OpenWireRootUnit__.Start1.OutputPin"
+                },
+                {
+                  "ID": "__OpenWireRootUnit__.DetectEdge1.OutputPin"
+                }
+              ]
+            },
+            "+": "TArduinoTimeoutTimer",
+            "Interval": 500000
+          },
+          "Type": "Component",
+          "Y": 896
+        },
+        {
+          "X": 624,
+          "Name": "CompareValue9",
+          "Instance": {
+            "Value": "cal",
+            "InputPin": {
+              "SourcePin": {
+                "ID": "__OpenWireRootUnit__.CharToText1.OutputPin"
+              }
+            },
+            "+": "TArduinoTextCompareValue",
+            "OutputPin": {
+              "SinkPins": [
+                {
+                  "ID": "__OpenWireRootUnit__.DetectEdge3.InputPin"
+                }
+              ]
+            }
+          },
+          "Type": "Component",
+          "Y": 384
+        },
+        {
+          "X": 512,
+          "Name": "CharToText1",
+          "Instance": {
+            "OutputPin": {
+              "SinkPins": [
+                {
+                  "ID": "__OpenWireRootUnit__.CompareValue9.InputPin"
+                },
+                {
+                  "ID": "__OpenWireRootUnit__.CompareValue1.InputPin"
+                }
+              ]
+            },
+            "InputPin": {
+              "SourcePin": {
+                "Name": "__OpenWireRootUnit__.Arduino.Serial[0].OutputPin",
+                "ID": "__OpenWireRootUnit__.Arduino.Serial._Item0.OutputPin"
+              }
+            },
+            "+": "TArduinoCharToText"
+          },
+          "Type": "Component",
+          "Y": 256
+        },
+        {
+          "X": 864,
+          "Name": "DetectEdge3",
+          "Instance": {
+            "OutputPin": {
+              "SinkPins": [
+                {
+                  "ID": "__OpenWireRootUnit__.WeightScale1.CalibrateInputPin"
+                }
+              ]
+            },
+            "InputPin": {
+              "SourcePin": {
+                "ID": "__OpenWireRootUnit__.CompareValue9.OutputPin"
+              }
+            },
+            "+": "TArduinoDetectEdge"
+          },
+          "Type": "Component",
+          "Y": 336
+        },
+        {
+          "X": 624,
+          "Name": "CompareValue1",
+          "Instance": {
+            "Value": "zero",
+            "InputPin": {
+              "SourcePin": {
+                "ID": "__OpenWireRootUnit__.CharToText1.OutputPin"
+              }
+            },
+            "+": "TArduinoTextCompareValue",
+            "OutputPin": {
+              "SinkPins": [
+                {
+                  "ID": "__OpenWireRootUnit__.DetectEdge4.InputPin"
+                }
+              ]
+            }
+          },
+          "Type": "Component",
+          "Y": 448
+        },
+        {
+          "X": 864,
+          "Name": "DetectEdge4",
+          "Instance": {
+            "OutputPin": {
+              "SinkPins": [
+                {
+                  "ID": "__OpenWireRootUnit__.WeightScale1.ZeroInputPin"
+                }
+              ]
+            },
+            "InputPin": {
+              "SourcePin": {
+                "ID": "__OpenWireRootUnit__.CompareValue1.OutputPin"
+              }
+            },
+            "+": "TArduinoDetectEdge"
+          },
+          "Type": "Component",
+          "Y": 464
+        },
+        {
+          "X": 816,
+          "Name": "Timer",
+          "Instance": {
+            "CanRestart": false,
+            "OutputPin": {
+              "SinkPins": [
+                {
+                  "ID": "__OpenWireRootUnit__.DigitalMultiSource1.InputPin"
+                }
+              ]
+            },
+            "+": "TArduinoTimer",
+            "StartInputPin": {
+              "SourcePins": [
+                {
+                  "ID": "__OpenWireRootUnit__.DetectEdge.OutputPin"
+                }
+              ]
+            },
+            "ResetInputPin": {
+              "SourcePins": [
+                {
+                  "ID": "__OpenWireRootUnit__.DetectEdge2.OutputPin"
+                }
+              ]
+            },
+            "Interval": 500000
+          },
+          "Type": "Component",
+          "Y": 1184
+        },
+        {
+          "X": 912,
+          "Name": "DetectEdge",
+          "Instance": {
+            "OutputPin": {
+              "SinkPins": [
+                {
+                  "ID": "__OpenWireRootUnit__.Timer.StartInputPin"
+                }
+              ]
+            },
+            "InputPin": {
+              "SourcePin": {
+                "ID": "__OpenWireRootUnit__.CompareRange1.OutputPin"
+              }
+            },
+            "+": "TArduinoDetectEdge"
+          },
+          "Type": "Component",
+          "Y": 1104
+        },
+        {
+          "X": 1168,
+          "Name": "DisplayOLED1",
+          "Instance": {
+            "Text": {
+              "Size": 2
+            },
+            "InputPin": {
+              "SourcePins": [
+                {
+                  "ID": "__OpenWireRootUnit__.WeightScale1.OutputPin"
+                }
+              ]
+            },
+            "+": "TArduinoDisplaySSD1306I2C",
+            "OutputPin": {
+              "SinkPins": [
+                {
+                  "Name": "__OpenWireRootUnit__.Arduino.I2CChannels.I2C.InputPin",
+                  "ID": "__OpenWireRootUnit__.Arduino.I2CChannels._Item0.InputPin"
+                }
+              ]
+            }
+          },
+          "Type": "Component",
+          "Y": 576
+        }
+      ],
+      "Type": "Diagram",
+      "Selection": [
+        "DetectEdge"
+      ]
+    }
+  ]
+}
