@@ -51,5 +51,14 @@ this is the force path:
 
 ![toolhead_4](https://github.com/jesyblue/EVA-mod-for-load-cel-probe/assets/40912320/3ddb1d4e-8092-497f-951b-c366da8d01f5)
 
+i had to cut about 12,5mm from each end of the load cell to fit inside the toolhead.
+
+![cell_cut_2](https://github.com/jesyblue/EVA-mod-for-load-cel-probe/assets/40912320/e8f8badb-7d29-4b65-ae83-6a1d5560c50c)
+
+![cell_mount_2](https://github.com/jesyblue/EVA-mod-for-load-cel-probe/assets/40912320/8101e2a1-75ad-48bb-8f2b-eaed6cc61721)
+
+this is a early test when the code was not fast enough
+
+https://photos.app.goo.gl/1WQfbn4UWSj5rhDH8
 
 
