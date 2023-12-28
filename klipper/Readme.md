@@ -1,6 +1,6 @@
 In klipper what is important is to define probe section and the activation pin 
 
-
+ ```yaml
 [output_pin probe_0]
 pin: EBBCan:PB9
 #pwm: False
@@ -34,10 +34,12 @@ deactivate_gcode:
   SET_PIN PIN=probe_0 VALUE=0
   SET_LED LED=hotend_rgb RED=1.0 GREEN=1.0 BLUE=1.0
  # G4 P500 #pause
+ ```
 
 
 Ad some macro for activate and deactivate the probe.
 
+```yaml
 [gcode_macro Enable_probe]
 gcode:
   G4 P500 #pause
@@ -53,3 +55,4 @@ gcode:
   SET_PIN PIN=probe_0 VALUE=0
   SET_LED LED=hotend_rgb RED=1.0 GREEN=1.0 BLUE=1.0
  # G4 P500 #pause
+ ```
